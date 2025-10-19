@@ -1,0 +1,13 @@
+
+
+create linked list in a loop with value x
+
+
+while(x!= -1){
+       
+        node *node = createnode(x);
+        tail->next = node;
+        node->prev = tail;
+        tail = node;
+        
+    }
