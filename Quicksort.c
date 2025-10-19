@@ -3,6 +3,8 @@
 void quicksort(int *arr, int start, int end);
 int pivot_locate(int *arr, int start, int end);
 
+//quick sort like merge split the arr in each recursion,
+//instead orginizes each created arr with a pivot value with vals greater then pivot to right and less than to left
 int main(void)
 {
     int len;
@@ -27,7 +29,9 @@ int main(void)
 }
 
 void quicksort(int *arr, int start, int end)
+
 {
+    //end recursion when one or 0 values left in arr
     if (end <= start)
         return;
 
@@ -38,6 +42,8 @@ void quicksort(int *arr, int start, int end)
 int pivot_locate(int *arr, int start, int end){
     int pivot = arr[end];
     int i = start - 1;
+    //relative to the value of the pivot in the arr, if smaller swap i and j
+    //pushed larger value to the right and smaller to the left, with pivot at center
     for (int j = start; j < end; j++){
         if (arr[j] < pivot){
             i++;
@@ -46,10 +52,12 @@ int pivot_locate(int *arr, int start, int end){
             arr[j] = temp;
         }
     }
+    //for loop does not account for all values in both even and odd length arrs
     i++;
     int temp = arr[i];
     arr[i] = arr[end];
     arr[end] = temp;
 
     return i;
+
 }
