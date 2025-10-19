@@ -34,6 +34,7 @@ void Mergesort(int *arr, int arrlen ){
     if (arrlen <=1){
         return;
     }
+    // at each call split passed arr into 2 new arrs
     int L_len = arrlen/2;
     int R_len = arrlen - L_len;
     int *left = malloc(L_len * sizeof(int));
@@ -52,8 +53,11 @@ void Mergesort(int *arr, int arrlen ){
         }
     
     }
+    //recursive call of both created arrays
     Mergesort(left, L_len);
     Mergesort(right,R_len);
+    // recursion loops through all array slices and sorts each, merge them all back again
+    //to get the sorted original arr
     merge(left,right,arr, arrlen);
     
     free(left);
@@ -65,7 +69,7 @@ void merge(int *left, int *right, int *arr, int arrlen){
     int L_len = arrlen/2;
     int R_len = arrlen - L_len;
     int i=0,R=0,L= 0;
-
+//sort values as main arr is recreated
     while(L<L_len && R<R_len){
         if (left[L]<right[R]){
             arr[i] = left[L];
@@ -77,6 +81,7 @@ void merge(int *left, int *right, int *arr, int arrlen){
             i++; R++;
         }
     }
+    //first while loop left out some values, these whiles catch them
     while(L<L_len){
         arr[i] = left[L];
             i++; L++;
