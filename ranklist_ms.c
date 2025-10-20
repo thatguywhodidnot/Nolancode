@@ -41,6 +41,7 @@ int main(void){
         for(int j= 0; j<TOTAL; j++){
             scanf("%d",&playerlist[i].scores[j]);
         }
+        playerlist[i].scores[TOTAL]= sum(playerlist[i].scores,TOTAL);
     }
     scanf("%d",&key);
 
@@ -48,23 +49,18 @@ int main(void){
 
     for(int i = 0; i<n; i++){
         list[i]=&playerlist[i];
+
     }
     //check if totals ranklists need to run
-    if(key<=5){ 
-        mergeSort(list,n,key);
-    }
+    
+    mergeSort(list,n,key);
+    
 
     //creates modified arr of just totals for mergeSort
-    else{
-        Player **totals = malloc(n*sizeof(*totals));
-        for(int i = 0; i<n; i++){
-            totals[i]->name = list[i]->name;
-            totals[i]->scores[0]= sum(list[i]->scores, NUMGAMES) ;
+    
+        
 
-        }
-        mergeSort(totals,n,0);
-        free(totals);
-    }
+        
     printf("\n\n%s Ranklist\n\n",GAMES[key]);
 
     
