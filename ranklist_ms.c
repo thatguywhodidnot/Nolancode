@@ -51,17 +51,15 @@ int main(void){
         list[i]=&playerlist[i];
 
     }
-    //check if totals ranklists need to run
     
     mergeSort(list,n,key);
     
 
-    //creates modified arr of just totals for mergeSort
     
         
 
         
-    printf("\n\n%s Ranklist\n\n",GAMES[key]);
+    printf("\n\n%s Ranklist\n",GAMES[key]);
 
     
     for(int i = 0; i<n; i++){
@@ -88,6 +86,9 @@ void mergeSort(Player** list, int n, int key){
     if(n<=1){
         return;
     }
+    //split passed array of structs 
+    // will go recursively until arry is too small to sort
+    //need to add 30 base cas
     int L_len = n/2;
     int R_len = n - L_len;
     Player **left = malloc(L_len * sizeof(Player));
@@ -107,6 +108,7 @@ void mergeSort(Player** list, int n, int key){
     }
     mergeSort(left, L_len, key);
     mergeSort(right,R_len, key);
+    //at the end of rcursion all split arrays merge back
     merge(left,right,list, n,key);
 
 
@@ -119,8 +121,9 @@ void merge(Player **left, Player **right, Player **list, int n,int key){
     int R_len = n - L_len;
     int i=0,R=0,L= 0;
 
+    //going thru left and right arrays, add to list based on values size rel to each other
     while(L<L_len && R<R_len){
-        if (left[L]->scores[key]>right[R]->scores[key]){
+        if (compare(left[L],right[R],key) == 1){
             list[i] = left[L];
             i++; L++;
 
@@ -139,10 +142,18 @@ void merge(Player **left, Player **right, Player **list, int n,int key){
             i++; R++;
     }
 }
-int compare(Player* ptrP1, Player* ptrP2, int key){
-    return 0;
-}
 
+
+//will replace if statement in merge
+int compare(Player* ptrP1, Player* ptrP2, int key){
+    if (ptrP1->scores[key]< ptrP2->scores[key]){
+            return 0;
+        }
+    else{
+        return 1;
+    }
+}
+//will call for 30 base case
 void mergeSortRec(Player** list, int low, int high, int key){
 
     compare(list[low],list[high],key);
