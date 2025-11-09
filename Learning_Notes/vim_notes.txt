@@ -1,0 +1,28 @@
+VIM Notes
+
+
+
+Command mode 
+
+
+' : ' to input command
+	'w' to save
+	'q' to quit
+	'wq', 'q!' = quit and save, quit dont save
+	'set number' to see line numbers
+	'%s/' to find and replace, ex: ':%s/nolan/nolansnewname/g'
+		'g' at the end stands for greedy and replace all instances. add a 'c' after 'g' to make it ask you for confirmation before each instance change
+	
+
+some commands dont need colon
+	'dd' delete line
+		(or delete multiple lines with ':<line number1>,<line number2>d' deletes lines between 1 and 2 incluseively
+	'u' undo
+	ctrl + r = redo
+	/ is the search comand ex '/ nolan', 'n' to go to next search result
+	
+
+
+
+
+
