@@ -37,4 +37,4 @@ RELATION TO GITHUB
         git remote add origin https://github.com/thatguywhodidnot/NOLAN_CODE.git
         git push -u origin master
 
-    auth token 10/19 - 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
+    auth token 10/19 - 
