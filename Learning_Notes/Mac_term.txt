@@ -1,0 +1,41 @@
+Notes on Commands and their usage
+	MacOS is different from linux because they have different kernels
+	(mac uses darwin kernel built on FreeBSD and linux uses linux kernel)
+
+
+	curl
+		-make URL request
+		-ex:
+			curl http://localhost:8080
+			curl https://www.google.com
+			curl -X POST http://example.com
+
+
+	ifconfig
+
+		-Ex output:
+			eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+				inet 192.168.1.20  netmask 255.255.255.0  broadcast 192.168.1.255
+				inet6 fe80::a00:27ff:fe4e:66a1  prefixlen 64  scopeid 0x20<link>
+				ether 08:00:27:4e:66:a1  txqueuelen 1000  (Ethernet)
+				RX packets 1456  bytes 151234 (151.2 KB)
+				TX packets 1302  bytes 123456 (123.4 KB)
+
+		-Meaning:
+			-eth0 or emp0s3 = ethernet, lo = localhost, wlan0 or wlp2s0 = wifi, docker0 or br0 = virtual interfaces
+
+			-flags: 
+				UP/DOWN -> interface is enabled/disabled
+				RUNNING -> HW of interfaceis active
+				BROADCAST/MULTICAST -> supports broadcast/multicast 
+				PROMISC -> interface captures all packages
+			
+		
+
+	netstat (MacOs- only) same as 'ip route' on linux
+		-
+
+
+	ipconfig
+		-view and change IP configs
+			-
