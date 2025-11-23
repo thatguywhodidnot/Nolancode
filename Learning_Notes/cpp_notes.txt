@@ -1,0 +1,37 @@
+general notes for cpp based off of c knowledge
+
+
+important basics
+
+    -iostream -> new print, can do things like:
+        //text centering
+        //prints 'pad' amount of the character 'fill' around str
+        std::cout
+            << std::string(pad, fill) 
+            << " " << str << " "
+            << std::string(totalfill-pad, fill)
+            << "\n";
+
+    -Classes -> blueprint for an object, part of OOP
+        -contains attributes like a color
+        -contains functions like an action
+
+        -Ex:
+            class Dog{
+                //public attributes -> meaning they can be accessed form outside of class
+
+                public:
+                    std::string breed;
+                    int age;
+
+                //Constructors -> member functions that are auto called when and object of a class is made
+                //will have the same name as class
+                
+                Dog(std::string b, int a){
+                    age = a;
+                    breed =b;
+
+                }
+
+    
+            };

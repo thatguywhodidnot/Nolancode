@@ -11,7 +11,7 @@
 #include <cstdio>
 
 //glew has all the functions you need glewInit() to us modern GL functions
-#include <GL/glew.h
+#include <GL/glew.h>
 
 //glad is more modern than glew
 #include <glad/glad.h>
@@ -45,6 +45,9 @@ void center_out(const std::string&str, int width, char fill ){
         << "\n";
 }
 
+void sleepfor(int x){
+    std::this_thread::sleep_for(x)
+}
 
 int main(){
     int x = 2025;
