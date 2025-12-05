@@ -1,0 +1,46 @@
+
+
+linux sys admin
+
+
+
+maintenence, monitoring, and automation of linux systems that provide a service
+
+
+Bootloaders
+
+    GRUB (grand unified boot loader) (modern) and LILO (linux loader) (older)
+    Initrd (initial RAM disk)
+        
+        systemd is modern of telinit
+            -telinit(x) where x is a number corresponding to a system command
+
+
+
+
+
+    
+
+
+
+
+
+Maintenence and monitoring
+
+    systemctl (system control)
+        -systemctl <action>
+            -reboot
+            -shutdown
+            -poweroff
+        -systemctl <do something to> <service>
+            -systemctl status
+
+    journalctl ()
+
+
+    cron ()
+
+
+
+
+
