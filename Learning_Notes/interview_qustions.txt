@@ -1,0 +1,55 @@
+
+
+General questions and topics to study/know for a dream software position
+
+
+
+OpenGL and directx
+
+raytracing/raytracers
+    -program that renders graphics by sending rays from every pixel
+    -does intersection and physics light calculations to color each pixel you see
+
+software resterizers
+    -renders through algorithm that covers pixel on screen with triangles and then figure out how light will effect each pixel within each triangle
+    -software resterizations means the CPU is being used
+    -most modern GPUs use rastorization algorithm
+
+
+Graphics (CPP)
+
+    -what are templates
+    -what does 'inline' mean
+    -what are big and little endian
+    -what is a virtual function, how much overhead does it use 
+    -what are virtual destructors
+    -heap vs stack memory
+    -what is namespace/namesppace usage(
+        -prevents name conflicts
+        -creates spaces, if two things(function, variable) have the same name but are in different namespaces it will be ok
+        -use '::' this is a scope resoultion operator
+        -Example:
+            
+            #include <iostream>
+
+            namespace one{ int x =1; };
+            namespace two{ int x =4;};
+
+            int main(){ 
+                std::cout<< one::x;  //prints '1'
+                //or
+                using namespace one; std::cout<< x; //also prints '1'
+                return 0;
+            };
+
+        -if you use 'using namespace std::cout' you can the write only cout instead of std::cout
+        )
+
+
+
+Dlang( the d language)
+
+
+YAML(stands for 'yaml aint markup language)
+    -used for config files
+    -similar to json( you can write json syntax in YAML)

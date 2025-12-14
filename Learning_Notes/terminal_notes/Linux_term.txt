@@ -33,10 +33,12 @@ Maintenence and monitoring
             -shutdown
             -poweroff
         -systemctl <do something to> <service>
-            -systemctl status
+            -systemctl status 
 
     journalctl ()
 
+    nmcli (network manager command line tool)
+        -
 
     cron ()
 

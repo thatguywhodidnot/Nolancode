@@ -25,19 +25,32 @@ bool Vector2Equals(Vector2 a, Vector2 b) {
 }
 
 
-class bullet1(){
+class bullet1{
+    public:
+        Vector2 playerpos = p.pos; 
+        
 
-    Vector2 playerpos; 
-    int grade;
 
-    bullet(Vector2 pos, int grade){
-        pos = playerpos;
-        grade = grade;
-    }
-    void travel(){
 
-    }
 
+
+        // int grade;
+        // bool bullet = false;
+
+        // float firetime = 0.0f;
+        // float bulletlife = 2.0f;
+        // float bullet_speed = .9f;
+
+        // void shoot(){
+        //     if (IsMouseButtonPressed(MOUSE_BUTTON_RIGHT)) bullet = true;
+        //     if(bullet){
+        //         DrawRectangleRec(gun, RED);
+        //         gun.x+=bullet_speed;
+        //         bulletlife -= GetFrameTime();
+                
+        //     }
+        // };
+   
 };
 
 class Player{
@@ -72,10 +85,7 @@ class Player{
 
 	    }
 
-        void shoot(){
-
-
-        }
+        
 
 	    void draw() {
 		    DrawCircleV(pos, 20, RED);
@@ -90,6 +100,7 @@ class Deadly{
 	    Vector2 objpos = {500,500};
         Vector2 objsize = {20,20};
         Rectangle spot = {500,500,20,20};
+        int health = 100;
         
         void draw() {
 		    DrawRectangleRec(spot, GREEN);
@@ -103,6 +114,8 @@ class Deadly{
             
 
         };
+
+
         void kill(Player& p){
 
             if (CheckCollisionCircleRec(p.pos,20,spot)){

@@ -1,0 +1,35 @@
+
+
+
+resources
+    -start with unity
+    -jasper flick
+    -rastertek DX tutorials
+    -real-time rendering 4th edition
+    -research papaers
+
+Raylib
+    -main graphics loop
+        InitWindow(800, 600, "Raylib Test");
+        while (!WindowShouldClose()) {
+            #define variables
+            BeginDrawing();
+
+            #call class functions 
+            # rayfunctions such as Drawtext
+
+            EndDrawing();
+        }
+
+OpenGl
+
+
+GLSL(OpenGL shading language)
+    -for OpenGL (non windows)
+    -c language esc
+
+HLSL (High level Shader language) 
+    -used on directx for windows machines
+    -cpp language esc
+
+    

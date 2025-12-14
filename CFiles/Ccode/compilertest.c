@@ -16,6 +16,7 @@ int main(){
     
         printf("%s", buffer);
     }
+    
 
 
     fclose(file);
