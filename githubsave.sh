@@ -14,4 +14,4 @@ git branch -M main
 git remote remove origin 2>/dev/null
 git remote add origin git@github.com:thatguywhodidnot/Nolancode.git
 
-git push -u origin main --force
+git push origin main
