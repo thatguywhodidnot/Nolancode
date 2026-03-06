@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/myproject.dir/main.cpp.o -o myproject  -Wl,-rpath,/opt/homebrew/lib lib/libmylib.a /opt/homebrew/lib/libfmt.12.1.0.dylib

@@ -1,0 +1,17 @@
+
+
+CPU/Gpu workload perform analysis ⚒️
+
+
+architecture 
+	-CPU pipelines memory hieracrchy GPU excution models
+
+
+	cloud platform experience
+
+
+containers and orchestration 
+	-Docker and kubernetes
+
+
+

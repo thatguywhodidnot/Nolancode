@@ -1,0 +1,11 @@
+
+
+fmt
+
+SDL2
+
+spdlog	spdlog::spdlog
+
+Boost	Boost::boost
+
+OpenGL	OpenGL::GL
