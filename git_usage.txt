@@ -1,0 +1,5 @@
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+cat key and paste result into ssh key you make on github
+
+email used - thatguywhodidnot@github.com
