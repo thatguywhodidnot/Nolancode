@@ -1,0 +1,35 @@
+
+
+docker - put code/project and all dependancies into one package/file
+
+
+images - runtimes and dependanciesi made into a portable directory
+
+	-run "docker build -t 'docker_image_name'" -> docker image is made of of Dockerfile instructions -> run the image to create a container (container is the running app/product)
+
+	-contain read only sourece code that the container is made from
+	-ex:
+		project/
+			main.cpp
+			Dockerfile
+	-Dockerfile contains in plaintext the instuctions for when you run docker command to create container
+		-similar to CMakeLists.txt file for when you are running cmake
+		-file contains 
+			-FROM 
+				- can inclue and OS like a linux distro
+				- can include libraries and things like node.js
+				- can be a compiler (ex: gcc:13)
+			-WORKDIR
+				- sets the working dir so given example WORKDIR  would be '/project'
+			-COPY
+				- not necessarily needed but will copy files from your computer into the container upon container creation
+			-RUN
+				- command to run when container starts(ex: gcc main.cpp -o main
+				- TAKES PLACE WHILE IMAGE IS BEING MADE
+			-EXPOSE
+				- which port the container will listen on
+			-CMD
+				- (ex: './main')
+				- PART OF CONTAINER START
+
+

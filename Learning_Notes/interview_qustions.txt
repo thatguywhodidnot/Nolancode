@@ -28,6 +28,9 @@ Graphics (CPP)
 			-logic errors occur here 
     -what are templates
 		CPP ONLY
+		 - OOP tool for creating generic functions and classes that work with multiple data types
+		 -EX:
+		 	
     -what does 'inline' mean
 		-directly does what is in function instead of function call to save overhead.
 		-imagine the function being written out in each function call
