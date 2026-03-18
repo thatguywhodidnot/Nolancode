@@ -1,0 +1,13 @@
+- Working knowledge of Model Based Engineering (MBE), DOORs, Enterprise Architect, Rhapsody
+
+-UML and sysML
+
+-OS such as vxworks and integrity and real-time embedded linux
+
+-code analysis and fuzzing
+	-coverity, fortify, sonarqube
+
+-CI/CD, atlassian, Jenkins
+
+-compiler/linker
+
