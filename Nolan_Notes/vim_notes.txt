@@ -2,6 +2,28 @@ VIM Notes
 
 
 
+how to edit vim config 
+	-linux and mac
+		-in ~ directory create a .vimrc file 
+		-vim will automatically source the file whenever you vim a text file
+EX:
+
+		filetype plugin indent on
+
+
+		set number
+
+		set showcmd
+
+		set autoindent
+
+		set smartindent
+
+		set tabstop=4
+
+		syntax on
+		filetype plugin indent on
+
 Command mode 
 
 
