@@ -27,6 +27,11 @@ OpenGl
 GLSL(OpenGL shading language)
     -for OpenGL (non windows)
     -c language esc
+	
+
+
+
+
 
 HLSL (High level Shader language) 
     -used on directx for windows machines
