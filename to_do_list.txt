@@ -2,7 +2,8 @@
 List to remember interests
 	
 
-	-learn vi
+	-learn vim
+	-continue on nolancode/quicktests/moving_dot.c
 
 
 
@@ -13,7 +14,15 @@ DATA
 
 
 CPP
-
+	-cpp, hpp and overall project file layout
+		
+	hpp filem ?s
+		pragma
+		ifdef vs ifndef
+		define
+		using
+		include
+	'<filename>.sin' meaning
 
 	-
 
