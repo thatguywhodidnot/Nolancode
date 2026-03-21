@@ -1,0 +1,5 @@
+
+on ROCKY linux to install opengl tools and libraries paste command below into terminal 
+
+
+sudo dnf install mesa-libGL mesa-libGL-devel libX11-devel libXrandr-devel libXi-devel libXcursor-devel glfw glfw-devel

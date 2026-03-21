@@ -21,14 +21,20 @@ Raylib
             EndDrawing();
         }
 
-OpenGl
-
-
-GLSL(OpenGL shading language)
+OpenGl or  GLSL(OpenGL shading language)
     -for OpenGL (non windows)
     -c language esc
-	
+	Use:	
+		-Opengl is the api that is already on mac and linux systems 
+		-to use opengl in cpp programming you need GLAD and GLFW both are libraries for using opengl api
 
+		GLAD
+			-contains the opengl functions
+			-
+		GLFW
+			-the Graphic library framework.
+			-gives functions regarding displaying to screen and reading inputs
+			-there are other alternative frameworks
 
 
 
