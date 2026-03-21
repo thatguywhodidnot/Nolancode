@@ -44,7 +44,7 @@ int main(){
 
 	printf("struct A size : %zu\n", sizeof(struct A));	
 	printf("struct B size : %zu\n", sizeof(struct B));	
-
+	printf("%zu\n", sizeof(multiB));
 	
 	
 
