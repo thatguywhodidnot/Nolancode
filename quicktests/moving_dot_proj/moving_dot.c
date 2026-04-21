@@ -48,7 +48,7 @@ void print_dot(float spinx, float spiny, char draw){
 			float y = abs(i-diam);
 			float x = j;
 			float xshift = (pow(spinx*(x-rad),2.0));
-			float yshift = (pow(spiny*(y-rad),2.0));
+			float yshift = (pow((spiny*2)*(y-rad),2.0));
 			float pointval = xshift +yshift;
 			if(isaround(pointval,pow(rad,2.0))==0){
 				field[i][j] = draw;
@@ -62,7 +62,7 @@ void print_dot(float spinx, float spiny, char draw){
 void rotate_dot(char draw){
 	float turn_rate = 1/frames;
 	for(float i=1; i<full; i+=turn_rate){
-		i+=i/2.0;
+		i+=i/turn_exp;
 		clear_screen();
 		print_dot(i,1,draw);
 		print_dot(1,i,'o');
@@ -71,7 +71,7 @@ void rotate_dot(char draw){
 	}	
 
 	for(float i=full; i>1; i-=turn_rate){
-		i-=i/2.0;
+		i-=i/turn_exp;
 		clear_screen();
 		print_dot(i,1,draw);
 		print_dot(1,i,'o');
