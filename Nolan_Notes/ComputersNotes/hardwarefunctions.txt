@@ -1,0 +1,11 @@
+
+
+Cores and Threads
+    -CPU Cores 
+        -Physical processing units in CPUs
+        -parellel -> cores work at the same time
+        -continuous-> given core has to work on multiple threads, it switches back and forth between the threads
+
+    -Threads
+        -Threads are the tasks that cores execute(commands given to the cores)
+        -hyper-Threading core running multiple threads at once

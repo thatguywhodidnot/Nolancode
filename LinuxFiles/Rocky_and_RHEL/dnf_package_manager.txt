@@ -1,0 +1,6 @@
+
+
+dnf = dandified yum package manager 
+used same as regular yum mostly
+
+sudo dnf install <package>

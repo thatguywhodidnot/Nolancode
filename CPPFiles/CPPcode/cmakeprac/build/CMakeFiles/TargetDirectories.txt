@@ -1,0 +1,6 @@
+/Users/noamilligan/Desktop/Nolancode/CPPFiles/CPPcode/cmakeprac/build/CMakeFiles/myproject.dir
+/Users/noamilligan/Desktop/Nolancode/CPPFiles/CPPcode/cmakeprac/build/CMakeFiles/edit_cache.dir
+/Users/noamilligan/Desktop/Nolancode/CPPFiles/CPPcode/cmakeprac/build/CMakeFiles/rebuild_cache.dir
+/Users/noamilligan/Desktop/Nolancode/CPPFiles/CPPcode/cmakeprac/build/lib/CMakeFiles/mylib.dir
+/Users/noamilligan/Desktop/Nolancode/CPPFiles/CPPcode/cmakeprac/build/lib/CMakeFiles/edit_cache.dir
+/Users/noamilligan/Desktop/Nolancode/CPPFiles/CPPcode/cmakeprac/build/lib/CMakeFiles/rebuild_cache.dir

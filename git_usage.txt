@@ -1,0 +1,18 @@
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+cat key and paste result into ssh key you make on github
+
+email used - thatguywhodidnot@github.com
+
+
+given error: remote divergent branches, run rebase commands (rebase is like appending changes instead of merge which tries combine pastr change correctly and creates messier history)
+
+	git fetch origin
+	git rebase origin/<your branch>
+
+Then try 
+	
+	git pull origin main
+	./githubsave.sh
+
+

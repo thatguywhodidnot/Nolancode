@@ -1,0 +1,81 @@
+
+
+General questions and topics to study/know for a dream software position
+
+
+
+OpenGL and directx
+
+raytracing/raytracers
+    -program that renders graphics by sending rays from every pixel
+    -does intersection and physics light calculations to color each pixel you see
+
+software resterizers
+    -renders through algorithm that covers pixel on screen with triangles and then figure out how light will effect each pixel within each triangle
+    -software resterizations means the CPU is being used
+    -most modern GPUs use rastorization algorithm
+
+
+Graphics (CPP)
+
+	-what is runtime vs compile time?
+		compile time  = gcc main.cpp -o binary_executable
+			-compile time is when the human readble code is converted to binary executable file.
+			-syntax errors are found at compile time
+
+		runtime = ./binary_executable
+			-runtime is when you run the already compiled binary file
+			-logic errors occur here 
+    -what are templates
+		CPP ONLY
+		 - OOP tool for creating generic functions and classes that work with multiple data types
+		 -EX:
+		 	
+    -what does 'inline' mean
+		-directly does what is in function instead of function call to save overhead.
+		-imagine the function being written out in each function call
+		-code size increase but speed increase as well
+
+    -what are big and little endian
+		-ways to store multibyte data. not for performance but important for compatibility
+		EX:
+			
+    -what is a virtual function, how much overhead does it use 
+		- for virtual function example see classes_and_vfuncs in quicktests folder.
+		- 
+    -what are virtual destructors
+    -heap vs stack memory
+		-stack is quicker and automatic
+		-heap is manual but has more space(malloc calloc)
+		-heap is vulnerable to data corruption if the data stored in a mem address is accessed by multiple threads
+		-heap is good for unknown data sizes so that there is only as much memory as you need used
+
+    -what is namespace/namesppace usage(
+        -prevents name conflicts
+        -creates spaces, if two things(function, variable) have the same name but are in different namespaces it will be ok
+        -use '::' this is a scope resoultion operator
+        -Example:
+            
+            #include <iostream>
+
+            namespace one{ int x =1; };
+            namespace two{ int x =4;};
+
+            int main(){ 
+                std::cout<< one::x;  //prints '1'
+                //or
+                using namespace one; std::cout<< x; //also prints '1'
+                return 0;
+            };
+
+        -if you use 'using namespace std::cout' you can the write only cout instead of std::cout
+        )
+
+
+
+Dlang( the d language)
+
+
+YAML(stands for 'yaml aint markup language)
+    -used for config files
+    -similar to json( you can write json syntax in YAML)

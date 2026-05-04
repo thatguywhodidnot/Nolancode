@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 4.2)
+project(myproject)
+
+find_package(fmt)
+
+add_executable(${PROJECT_NAME} main.cpp)
+
+
+
+#add_library(mylib SHARED lib.cpp)
+#no longer needed after lib dir is made
+
+target_link_libraries(${PROJECT_NAME} mylib fmt::fmt)
+
+add_subdirectory(lib)
+
+

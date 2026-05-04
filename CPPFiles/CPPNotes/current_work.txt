@@ -1,0 +1,11 @@
+
+
+cpp intro projects
+ example proj: create group of people with own belongings
+ 	classes
+	arrays 
+	mem allocation
+	attributes
+
+
+concepts

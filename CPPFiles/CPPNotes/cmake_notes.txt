@@ -1,0 +1,31 @@
+
+
+see cmakeprac for proper CmakeLists.txt format
+
+
+proper file structures
+
+
+
+proj/
+	build/
+		#run 'cmake'
+		#run make
+	CmakeLists.txt
+	lib/
+		CmakeLists.txt #specific to lib directory see 
+		libfilename.cpp
+		libfilename.h
+	main.cpp
+
+
+
+fmt is outside library use as example. as seen in CmakeLists.txt
+reference a library's documentation for proper cmake file implementation older libraries may be different
+
+
+install fm with 'brew install fmt'
+
+find_package(<library>) and adding 'fmt::fmt; to target_link_libraries() is needed to properly use
+
+

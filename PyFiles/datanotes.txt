@@ -1,0 +1,24 @@
+propensity models
+
+
+logixtical regression
+
+
+
+radnom forests, xgboost, lightGBM
+
+
+
+unsupervised algorithms
+
+
+
+SQL
+python plots
+
+
+
+
+AI - Python stuff
+
+Pytorch tensorflow onnx hugging face

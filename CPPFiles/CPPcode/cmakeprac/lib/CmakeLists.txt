@@ -1,0 +1,7 @@
+add_library(mylib lib.cpp)
+
+
+target_include_directories(mylib INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+#INTERFACE
+#PUBLIC
+#PRIVATE - anything linking to this directory will use, target might not common for header libs
