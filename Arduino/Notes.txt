@@ -1,0 +1,43 @@
+Features 
+	-Micro controller
+
+	-USB to Serial
+Terms
+
+	Pins
+		-TX
+		-RX
+
+		-Digital IO(input and output but only 1,0 language)
+		-Analog input(wide range of values instead of just on and off like digital)
+			-analogs are connected to analog to digital converter that is built in to arduino(ADC)
+			-arduino reads in 1s and 0s so that is why converter is needed
+			-ADC range of values is from 0-1023 represented by different Voltages from 0V-5V
+
+
+		-Pins with a tilde next to them are PWM (pulse width modulated signal pins)
+			can turn on and off fast, or 'pulse'
+
+		-VIN pin is an alternate arduino power source that can carry 7V to 12V
+			-means 'voltage in' use to have an unregulated power supply
+	Arduino extensions
+		-sheilds(stackable circuit board)
+			-stacks onto arduino and adds specific functionality
+
+	Programming
+		arduno IDE uses a modified CPP. Programs written for the arduino are called 'sketch' they have '.ino' extension.
+
+		Sketch program:
+			(two required functions)
+				void setup(){} and void loop(){}
+			
+			setup function runs ONCE
+			loop runs OVER AND OVER
+
+
+
+
+
+
+
+
