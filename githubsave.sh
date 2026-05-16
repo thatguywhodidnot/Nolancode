@@ -14,4 +14,11 @@ git branch -M main
 git remote remove origin 2>/dev/null
 git remote add origin git@github.com:thatguywhodidnot/Nolancode.git
 
-git push origin main
+if git push origin main; then
+	echo "push succeded no divergent branches"
+	exit 0
+else
+	git fetch origin
+	git rebase origin/main
+	git push origin main
+fi
