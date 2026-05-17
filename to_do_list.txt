@@ -31,7 +31,8 @@ Graphics
 
 Embedded
 	-Try tinkercad or wokwi
-
+Systems 
+	-build text editor
 
 
 
