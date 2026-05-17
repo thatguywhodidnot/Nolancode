@@ -1,62 +1,109 @@
 
 
-#include "main.h"
-
-void readData(struct Student *students, int *c){
-	
-	scanf("%d", c);
-	//for each row of values in input file ID and grades into mathcing student struct
-	for(int i=0; i<*c; i++){
-		scanf("%d", &students[i].student_ID);
-		scanf("%d", &students[i].g1);
-		scanf("%d", &students[i].g2);
-		scanf("%d", &students[i].g3);
-	//after int values are read get average of in grades for student
-		float scoreSum = students[i].g1 + students[i].g2 + students[i].g3;
-		students[i].average = scoreSum/3;
-
-	}
+#include <stdio.h>
+#include <stdlib.h>
 
 
+typedef struct student{
+    char* lname; //this will require DMA to store a string
+    int assignment;
+    int finalExam;
+    int total;
+    int *quizzes;//this will require DMA to store quizzes
+}student;
+
+student** readCourses(int* C, int* N, int* M);
+void release_memory(student** st, int C, int N, int M);
+void printHighestTotal(student **st, int C, int N, int M);
+
+student** readCourses(int* C, int* N, int* M){
+    
+    //fill given addresses with user supllied integers
+    scanf("%d %d %d", C, N, M);
+    
+    //allocate memory for the student struct pointers and then in each address allocate space for student structs, and then in each struct allocat space for stings and integer arrays
+    student** scores = malloc(*C*sizeof(student*));
+    
+    for(int i=0; i<*C; i++){
+        scores[i] = malloc(*N*sizeof(student));
+        for(int j=0; j<*N; j++){
+            scores[i][j].lname = malloc(12*sizeof(char));
+            scores[i][j].quizzes = malloc(*M*sizeof(int));
+            
+            //after mem for scores student arr is allocated read the given data into memory
+            scanf("%s %d", scores[i][j].lname, &scores[i][j].assignment);
+            int quiz_total = 0;
+            for(int k=0; k<*M; k++){
+                int quiz_score;
+                scanf("%d", &quiz_score);
+                quiz_total += quiz_score;
+                scores[i][j].quizzes[k] = quiz_score;
+            }
+            scanf("%d", &scores[i][j].finalExam);
+            scores[i][j].total = scores[i][j].finalExam + quiz_total + scores[i][j].assignment;
+            
+        }
+    }
+    
+    return scores;
 }
 
-struct Student getMaxAverageStudent(struct Student *s, int n){
-	//use max as place holder when checking which students avg is highest
-	float max = 0;
-	//max student will hold the highest avg students inof and be returned
-	struct Student maxstudent;
-	// loop goes through student avg value and if it is greater than previous value it takes its place as the max student
-	for(int i=0; i<n; i++){
-		if(s[i].average > max){
-			max = s[i].average;
-			maxstudent = s[i];
-		} 
-	}
+void printHighestTotal(student **st, int C, int N, int M){
 
-	return maxstudent;
-
-
+    int temp_high = 0;
+    int temp_course;
+    int temp_student;
+    
+    for(int i=0; i<C; i++){
+        for(int j=0; j<N; j++){
+            if(st[i][j].total>temp_high){
+                temp_high = st[i][j].total;
+                temp_course = i;
+                temp_student = j;
+                
+            }
+        }
+    }
+    printf("Name: %s\n", st[temp_course][temp_student].lname);
+    
+    printf("Assignment: %d\n", st[temp_course][temp_student].assignment);
+    
+    printf("Quizzes: ");
+    for(int i=0; i<M; i++){
+        printf("%d ",st[temp_course][temp_student].quizzes[i]);
+    }
+    printf("\n");
+    
+    printf("Final Exam: %d\n",st[temp_course][temp_student].finalExam);
+    printf("Total: %d\n", st[temp_course][temp_student].total);
+    printf("Course Number: %d\n", temp_course+1);
+    
+    
 }
 
 
-int main(){
-	struct Student student[MAX_SIZE];
-	int numberStudents;
 
-	readData(student, &numberStudents);
-	struct Student maxstudent = getMaxAverageStudent(student, numberStudents);
-	
+void release_memory(student** st, int C, int N, int M){
+    
+    for(int i=0; i<C; i++){
+        for(int j=0; j<N; j++){
+            free(st[i][j].lname);
+            free(st[i][j].quizzes);
+        }
+        free(st[i]);
+    }
+    free(st);
+    
+}
 
-	//print output
-	for(int i=0; i<numberStudents; i++){
 
-		printf("%d ", student[i].student_ID);
-		printf("%d ", student[i].g1);
-		printf("%d ", student[i].g2);
-		printf("%d ", student[i].g3);
-		printf("%.2f\n", student[i].average);
-	}
-	printf("\nMaximum Average is %.2f and the student is %d\n", maxstudent.average, maxstudent.student_ID);
+int main() {
+    
+    student **courseList;
+    int C, N, M;
+    courseList = readCourses(&C, &N, &M);
+    printHighestTotal(courseList, C, N, M);
+    release_memory(courseList, C, N, M);
 
-	return 0;
+    return 0;
 }
