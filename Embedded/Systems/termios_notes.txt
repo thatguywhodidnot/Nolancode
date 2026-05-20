@@ -1,0 +1,10 @@
+
+
+include termios in c files with #include <termios.h>
+
+
+termios is a terminal api, includeing 'struct termios', 'tcgetattr', 'tcsetattr'
+
+tcgetattr is used to read terminal attributes into a termios struct, and tcsetattr is used to apply stuct attributes.
+
+

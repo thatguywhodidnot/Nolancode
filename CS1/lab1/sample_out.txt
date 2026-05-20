@@ -1,6 +1,6 @@
 Name: muhammad
 Assignment: 10
 Quizzes: 12 10 
-Final Exam: 45
+Final exam: 45
 Total: 77
-Course Number: 2
+Course number: 2
