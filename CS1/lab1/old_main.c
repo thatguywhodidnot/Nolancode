@@ -1,8 +1,8 @@
-#include <string.h>
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "leak_detector_c.h"
-#define MAXLEN 15
+
 
 typedef struct student{
     char* lname; //this will require DMA to store a string
@@ -27,18 +27,11 @@ student** readCourses(int* C, int* N, int* M){
     for(int i=0; i<*C; i++){
         scores[i] = malloc(*N*sizeof(student));
         for(int j=0; j<*N; j++){
-
-			char templname[MAXLEN+1];
-			scanf("%s", templname);
-			int len = strlen(templname);
-
-            scores[i][j].lname = malloc(len*sizeof(char));
-			strcpy(scores[i][j].lname, templname);
-
+            scores[i][j].lname = malloc(12*sizeof(char));
             scores[i][j].quizzes = malloc(*M*sizeof(int));
             
             //after mem for scores student arr is allocated read the given data into memory
-            scanf("%d", &scores[i][j].assignment);
+            scanf("%s %d", scores[i][j].lname, &scores[i][j].assignment);
             int quiz_total = 0;
             for(int k=0; k<*M; k++){
                 int quiz_score;
