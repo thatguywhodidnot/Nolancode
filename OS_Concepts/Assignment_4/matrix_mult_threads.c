@@ -27,7 +27,7 @@ void* multiply_section(void* arg){
             }
         }
     }
-
+	return NULL;
 };
 
 void print_times(struct timeval multi_start,struct timeval multi_end, struct timeval single_start, struct timeval single_end){
