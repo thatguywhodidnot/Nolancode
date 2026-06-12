@@ -46,6 +46,9 @@ int isEmpty(queue* line){
 
 
 customer* peek(queue* line){
+    if(isEmpty(line)){
+        return NULL;
+    }
     
     return line->front->customer;
 
@@ -53,7 +56,7 @@ customer* peek(queue* line){
 
 void print_customer(customer* customer, int base_time){
 
-    printf("At time %d, %s left the counter from line %d.\n", base_time, customer->customer->name, customer->customer->line_num);
+    printf("At time %d, %s left the counter from line %d.\n", base_time, customer->name, customer->line_num);
 
 }
 
@@ -72,8 +75,29 @@ customer* dequeue(queue* line){
     return customer;
 
 }
-//combine these functions??
-int find_least_smoothie(queue* line_queue, int base_time){
+
+int find_earliest(queue* line_queue){
+    int best = 12;
+    for(int i=0; i<NUM_LINES; i++){
+        
+            customer* curr = peek(&line_queue[i]);
+            
+            if(curr != NULL){
+                if(best == 12){
+                    best = i;
+                }
+                else{
+                    customer* compare = peek(&line_queue[best]);
+                    if(curr->time_in < compare->time_in){
+                            best = i;
+                    }
+                }
+            }
+        }
+        return best;
+}
+
+int find_next_customer(queue* line_queue, int base_time){
     int best = 12;
     for(int i=0; i<NUM_LINES; i++){
         
@@ -83,27 +107,43 @@ int find_least_smoothie(queue* line_queue, int base_time){
             if(best == 12){
                 best = i;
             }
-            
-        }
-        
+            else{
+                customer* compare = peek(&line_queue[best]);
+                
+                if(curr->num_smoothies < compare->num_smoothies){
+                    best = i; 
+                }
+                else if(curr->num_smoothies == compare->num_smoothies && curr->time_in < compare->time_in){
+                    best = i;
+                }
+            }
+        }   
     }
-    
-
+    return best;
 }
 
-// int find_earliest(){}
+void sort_and_print(queue* line_queue, int num_customers){
 
-void sort_and_print(queue* line_queue){
+    int best, i, curr_time = 0;
+    for(i=0; i<num_customers; i++){
+        
+        best = find_next_customer(line_queue, curr_time);
+        
+        if(best == 12){
+            best = find_earliest(line_queue);
+            curr_time = peek(&line_queue[best])->time_in;
+            
+        }
 
-    int best, curr_time = 0;
-    best = find_least_smoothie(line_queue);
-    if(best = 12){
-        best = find_earliest();
+        customer* curr_customer = dequeue(&line_queue[best]);
+
+        curr_time += 30 + (5 * curr_customer->num_smoothies);
+
+        print_customer(curr_customer, curr_time);
+
+        free(curr_customer->name);
+        free(curr_customer);
     }
-
-    customer* curr_customer = dequeue(&line_queue[best]);
-
-    print_customer(curr_customer, curr_time);
 
 
 }
@@ -117,7 +157,7 @@ void enqueue(queue* line_queue){
 
     int line_num = temp->customer->line_num - 1;
 
-    if(line_queue[line_num].front == NULL){
+    if(isEmpty(&line_queue[line_num])){
         line_queue[line_num].front = temp;
         line_queue[line_num].back = temp;
     }
@@ -159,9 +199,9 @@ int main(){
 
         num_customers = init(line_queue);
 
-        sort_and_print(line_queue);
-
+        sort_and_print(line_queue, num_customers);
+        free(line_queue);
     }
-    free(line_queue);
+    
 
 }
