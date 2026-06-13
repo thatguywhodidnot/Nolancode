@@ -1,0 +1,8 @@
+
+first come first serve
+
+Round Robin
+
+short-job-first
+
+dispatcher
