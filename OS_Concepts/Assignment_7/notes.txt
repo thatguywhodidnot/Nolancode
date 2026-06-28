@@ -1,0 +1,17 @@
+
+memory setup
+    -logical addr (or virtual address)= addr created by the cpu that the current running program uses has a corresponding physical address
+    (logically to a program the address might be 10, but its corresponding physical address might actually be 12)
+    
+    -physical address = actual address of memory.
+
+    -MMU(Memory Management Unit) = perfroms the transalation of logical address to physical address
+
+    pages and frames
+    -page = a page is a virtual block of a virtual memory space
+    -frame = a frame is a block of physical memory space
+
+page table
+
+
+address translation
