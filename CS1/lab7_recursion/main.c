@@ -2,15 +2,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct node{
-    node* next;
+struct node{
+    struct node* next;
     int val;
-}node;
+};
 
 struct node* insert(struct node* list, int d){
     if(list == NULL){
-        node* newNode = malloc(sizeof(node));
+        struct node* newNode = malloc(sizeof(struct node));
         newNode->next = NULL;
+        newNode->val = d;
+        return newNode;
+    }
+    else if(d < list->val){
+        struct node* newNode = malloc(sizeof(struct node));
+        newNode->next = list;
         newNode->val = d;
         return newNode;
     }
@@ -19,10 +25,44 @@ struct node* insert(struct node* list, int d){
     
     
 }
-struct node* del(struct node* list ,int d);
-void print( struct node *list);
-void freeList(struct node* list);
-void copy ( struct node *q, struct node **s);
+struct node* del(struct node* list ,int d){
+    if(list == NULL){
+        return NULL;
+    }
+    else if(list->val == d){
+        struct node* delnode = list->next;
+        free(list);
+
+        return delnode;
+    }
+    else{
+        list->next = del(list->next, d);
+        return list;
+    }
+}
+
+
+void print(struct node *list){
+    if(list == NULL){
+        return NULL;
+    }
+    else{
+        printf("%d", list->val);
+        print(list->next);
+    }
+}
+
+void freeList(struct node* list){
+    if(list == NULL){
+        return NULL;
+    }
+    else if(list->next !=NULL){
+        freeList(list->next);
+    }
+    free(list);
+}
+
+void copy(struct node *q, struct node **s);
 
 int main( ) {
     int number = 0, choice=0;

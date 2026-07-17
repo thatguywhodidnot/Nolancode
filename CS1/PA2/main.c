@@ -122,11 +122,8 @@ int find_next_customer(queue* line_queue, int base_time){
                 if(curr->num_smoothies < compare->num_smoothies){
                     best = i; 
                 }
-                else if(curr->num_smoothies == compare->num_smoothies && curr->time_in < compare->time_in){
-                    best = i;
-                }
             }
-        }   
+        }
     }
 	//return the index of the line in the set of lines who had the best next customer at front
     return best;
@@ -157,8 +154,6 @@ void sort_and_print(queue* line_queue, int num_customers){
         free(curr_customer->name);
         free(curr_customer);
     }
-
-
 }
 
 //add items to respective lines

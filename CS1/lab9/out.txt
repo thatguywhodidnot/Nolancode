@@ -1,0 +1,42 @@
+Sorting 1000 values will take 0 milliseconds for Merge-Insert Sort
+Sorting 1000 values will take 0 milliseconds for Merge Sort
+Sorting 1000 values will take 0 milliseconds for Insertion Sort
+Sorting 1000 values will take 2 milliseconds for Selection Sort
+Sorting 1000 values will take 0 milliseconds for Quick Sort
+Sorting 1000 values will take 3 milliseconds for Buubble Sort
+
+Sorting 2000 values will take 0 milliseconds for Merge-Insert Sort
+Sorting 2000 values will take 0 milliseconds for Merge Sort
+Sorting 2000 values will take 4 milliseconds for Insertion Sort
+Sorting 2000 values will take 6 milliseconds for Selection Sort
+Sorting 2000 values will take 0 milliseconds for Quick Sort
+Sorting 2000 values will take 9 milliseconds for Buubble Sort
+
+Sorting 3000 values will take 0 milliseconds for Merge-Insert Sort
+Sorting 3000 values will take 0 milliseconds for Merge Sort
+Sorting 3000 values will take 6 milliseconds for Insertion Sort
+Sorting 3000 values will take 10 milliseconds for Selection Sort
+Sorting 3000 values will take 0 milliseconds for Quick Sort
+Sorting 3000 values will take 17 milliseconds for Buubble Sort
+
+Sorting 4000 values will take 0 milliseconds for Merge-Insert Sort
+Sorting 4000 values will take 0 milliseconds for Merge Sort
+Sorting 4000 values will take 10 milliseconds for Insertion Sort
+Sorting 4000 values will take 16 milliseconds for Selection Sort
+Sorting 4000 values will take 0 milliseconds for Quick Sort
+Sorting 4000 values will take 32 milliseconds for Buubble Sort
+
+Sorting 5000 values will take 0 milliseconds for Merge-Insert Sort
+Sorting 5000 values will take 1 milliseconds for Merge Sort
+Sorting 5000 values will take 15 milliseconds for Insertion Sort
+Sorting 5000 values will take 26 milliseconds for Selection Sort
+Sorting 5000 values will take 0 milliseconds for Quick Sort
+Sorting 5000 values will take 54 milliseconds for Buubble Sort
+
+Sorting 6000 values will take 0 milliseconds for Merge-Insert Sort
+Sorting 6000 values will take 1 milliseconds for Merge Sort
+Sorting 6000 values will take 23 milliseconds for Insertion Sort
+Sorting 6000 values will take 37 milliseconds for Selection Sort
+Sorting 6000 values will take 0 milliseconds for Quick Sort
+Sorting 6000 values will take 81 milliseconds for Buubble Sort
+

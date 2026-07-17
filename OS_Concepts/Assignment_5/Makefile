@@ -1,5 +1,7 @@
+#array_header.h and rr_header will both need to be in same directory as the c programs
+
 rr:
-	gcc round_robin.c -o round_robin && ./round_robin < processes.txt && rm -f round_robin
+	gcc RR.c -o RR && ./RR < processes.txt && rm -f RR
 fcfs:
 	gcc FCFS.c -o FCFS && ./FCFS < processes.txt && rm -f FCFS
 sjf:
