@@ -1,2 +1,2 @@
-sort:
-	gcc main.c && ./a.out > out.txt && rm -f a.out
+merge:
+	gcc merge_sort.c && ./a.out && rm -f a.out
