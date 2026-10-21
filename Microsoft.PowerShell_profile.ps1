@@ -1,5 +1,8 @@
 Set-Alias ll Get-ChildItem
 Set-Alias np notepad.exe
+
+# path to stage file C:\Users\nomil\OneDrive\Documents\WindowsPowerShell\
+# or use $PATH
 function nolancode {
     cd "C:\Users\nomil\OneDrive\Desktop\Nolancode"
 }
